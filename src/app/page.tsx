@@ -2,6 +2,8 @@
 import { useEffect, useState } from "react";
 import VideoRow from "../../components/VideoRow";
 import {client} from "../../libs/client"
+import VideoList from "../../components/VideoList";
+import Image from "next/image"
 
 type Thumbnail = {
   url:string;
@@ -28,11 +30,11 @@ const [videos,setVideos] = useState<Videos[]>([])
     getVideos()
    },[])
 
-   console.log(videos)
 
   return (
     <>
-     <VideoRow id={videos[0]?.movie_id} url={videos[0]?.thumbnail?.url}/>
+    <VideoList videos={videos}/>
+     {/* <VideoRow id={videos[0]?.movie_id} url={videos[0]?.thumbnail?.url}/> */}
     </>
   );
 }

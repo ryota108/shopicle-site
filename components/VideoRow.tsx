@@ -1,9 +1,12 @@
 import VideoCard from "./VideoCard"
+import VideoList from "../components/VideoList";
 
 type VideoInfo = {
   id:string;
   url:string;
 }
+
+
 
 const VideoRow:React.FC<VideoInfo> =({id,url}) => {
   
