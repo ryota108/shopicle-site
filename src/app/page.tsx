@@ -4,6 +4,7 @@ import VideoRow from "../../components/VideoRow";
 import {client} from "../../libs/client"
 import VideoList from "../../components/VideoList";
 import Image from "next/image"
+import Hero from "../../components/Hero"
 
 type Thumbnail = {
   url:string;
@@ -33,6 +34,7 @@ const [videos,setVideos] = useState<Videos[]>([])
 
   return (
     <>
+    <Hero/>
     <VideoList videos={videos}/>
      {/* <VideoRow id={videos[0]?.movie_id} url={videos[0]?.thumbnail?.url}/> */}
     </>
